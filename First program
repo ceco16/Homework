@@ -1,0 +1,44 @@
+#include <iostream>
+#include<cstdlib>
+using namespace std;
+
+int main()
+{
+    int A[5][5];
+    int sumGlaven=0;
+    int sumVtorostepenen=0;
+     for(int i=0;i<5;i++)
+   {
+     for(int j=0;j<5;j++)
+     {
+      A[i][j]=rand()%21+10;
+     }
+}
+ for(int i=0;i<5;i++)
+   {
+     for(int j=0;j<5;j++)
+     {
+      if(i==j)
+      {
+        sumGlaven+=A[i][j];
+      }
+     }
+   }
+    for(int i=0;i<5;i++)
+   {
+     for(int j=0;j<5;j++)
+     {
+         if((i+j)==j-1);
+         {
+          sumVtorostepenen+=A[i][j];
+         }
+     }
+   }
+   if(sumGlaven>sumVtorostepenen)
+    cout<<"Glavensum>Vtorostepenensum";
+   else if(sumVtorostepenen>sumGlaven)
+   cout<<"Vtorostepenensum>Glavensum";
+   else
+    cout<<"Glavensum=Vtorostepenensum";
+   return 0;
+}
